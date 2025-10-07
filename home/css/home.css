@@ -1,13 +1,27 @@
 body {
     background-color: #040D12;
-    font-family: Lexend;
-    color: #fff;
-}
-.header-social {
-    margin-top: 358px; 
+    font-family: 'Lexend', sans-serif;
+    font-size: xx-large;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-ul {
+
+.header-social {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px;
+}
+
+
+.header-social ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -15,34 +29,33 @@ ul {
     background-color: #323232;
     border-radius: 74px;
     text-align: center;
-    position: sticky;
     font-size: 25px;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-li a {
-    display: block;
+.header-social ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; 
+}
+.header-social li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: white;
     padding: 8px 16px;
     text-decoration: none;
+    border-radius: 10px;
 }
 
-li a:hover {
+.header-social li a:hover {
     background-color: #555555;
     color: #14FFEC;
 }
 
-body {
-    font-size: xx-large;
-    color: white;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh; 
-    margin: 0;
-}
 
 .bulk {
     margin-top: 10px;
@@ -56,33 +69,7 @@ body {
     align-items: center;
 }
 
-.row1_bulk, .row2_bulk, .row3_bulk, .row4_bulk {
-    width: 40vh;
-    height: 30vh;
-    border-radius: 20px;
-    background-color: #323232;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flexbulk {
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flexbulk2 {
-    margin-top: 10px;
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
+/* Cut blok */
 .cut {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -95,7 +82,26 @@ body {
     align-items: center;
 }
 
-.row1_cut, .row2_cut, .row3_cut, .row4_cut {
+
+.flexbulk, .flexcut {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexbulk2, .flexcut2 {
+    margin-top: 10px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.row1_bulk, .row2_bulk, .row3_bulk, .row4_bulk,
+.row1_cut, .row2_cut, .row3_cut, .row4_cut,
+.row1_Influencers, .row2_Influencers, .row3_Influencers, .row4_Influencers  {
     width: 40vh;
     height: 30vh;
     border-radius: 20px;
@@ -103,19 +109,4 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.flexcut {
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flexcut2 {
-    margin-top: 10px;
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
