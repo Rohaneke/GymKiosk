@@ -1,0 +1,87 @@
+body {
+    font-size: xx-large;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
+}
+
+.bulk {
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 60vh;
+    height: 10vh;
+    background-color: #0D7377;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row1_bulk, .row2_bulk, .row3_bulk, .row4_bulk {
+    width: 40vh;
+    height: 30vh;
+    border-radius: 20px;
+    background-color: #323232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbulk {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexbulk2 {
+    margin-top: 10px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.cut {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    width: 60vh;
+    height: 10vh;
+    background-color: #0D7377;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row1_cut, .row2_cut, .row3_cut, .row4_cut {
+    width: 40vh;
+    height: 30vh;
+    border-radius: 20px;
+    background-color: #323232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexcut {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexcut2 {
+    margin-top: 10px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
