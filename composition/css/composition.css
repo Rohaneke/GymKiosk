@@ -1,0 +1,178 @@
+body {
+    background-color: #040D12;
+    font-family: 'Lexend', sans-serif;
+    font-size: xx-large;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-social {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.header-social ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #323232;
+    border-radius: 74px;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header-social ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; 
+}
+
+.header-social li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.header-social li a:hover {
+    background-color: #555555;
+    color: #14FFEC;
+}
+
+.title {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    width: 60vh;
+    height: 10vh;
+    background-color: #0D7377;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gauge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.gauge {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(from 180deg, #ff0000 0deg, #ffff00 90deg, #00ff00 180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 20px solid #323232;
+}
+
+.gauge::before {
+    content: '';
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background-color: #040D12;
+    border-radius: 50%;
+}
+
+.gauge-fill {
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    background-color: white;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotate(-90deg);
+    transition: transform 2s;
+    z-index: 5;
+}
+
+.gauge-fill::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gauge-text {
+    position: relative;
+    z-index: 10;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.gauge-label {
+    margin-top: 20px;
+    font-size: 30px;
+    color: #14FFEC;
+}
+
+.scan-button {
+    background-color: #0D7377;
+    color: white;
+    border: none;
+    padding: 20px 60px;
+    font-size: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.scan-button:hover {
+    background-color: #14FFEC;
+    color: #040D12;
+}
+
+.composition-grid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.composition-box {
+    width: 40vh;
+    height: 30vh;
+    border-radius: 20px;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box-title {
+    font-size: 35px;
+    color: #14FFEC;
+}
+
+.box-value {
+    font-size: 50px;
+    font-weight: bold;
+}

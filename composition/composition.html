@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/composition.css">
+</head>
+<body>
+    <div class="header-social">
+        <nav class="header-nav-secondary">
+            <ul>
+                <li><a href="../home/home.html"><img src="/home/img/uitleg.png" alt="logo van uitleg"><span>Uitleg</span></a></li>
+                <li><a href="../food/food.html"><img src="/home/img/voeding.png" alt="logo van voeding"><span>Voeding</span></a></li>
+                <li><a href="../supps/supps.html"><img src="/home/img/sublementen.png" alt="logo van supplementen"><span>Supplementen</span></a></li>
+                <li><a href="../workout/workout.html"><img src="/home/img/workout.png" alt="logo van workout"><span>Workout</span></a></li>
+                <li><a href="./composition/composition.html"><img src="/home/img/Body-composition.png" alt="logo van Body-composition"><span>Body-composition</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="title">Body Composition</div>
+
+    <div class="gauge-container">
+        <div class="gauge">
+            <div class="gauge-fill" id="gaugeFill"></div>
+            <div class="gauge-text" id="gaugeText">0%</div>
+        </div>
+        <div class="gauge-label">Overall Body Score</div>
+    </div>
+
+    <button class="scan-button" id="scanButton">Start Scan</button>
+
+    <div class="composition-grid">
+        <div class="composition-box">
+            <div class="box-title">Body Fat</div>
+            <div class="box-value" id="bodyFat">---%</div>
+        </div>
+        <div class="composition-box">
+            <div class="box-title">Muscle Mass</div>
+            <div class="box-value" id="muscleMass">---%</div>
+        </div>
+    </div>
+
+    <script src="js/composition.js"></script>
+</body>
+</html>
