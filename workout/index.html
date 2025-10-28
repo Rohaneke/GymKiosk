@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout App</title>
+    <link rel="stylesheet" href="/workout/css/workout.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <button class="nav-btn" onclick="navigateTo('uitleg.html')">
+                <img src="icons/uitleg.svg" alt="uitleg">
+                <span>Uitleg</span>
+            </button>
+            <button class="nav-btn" onclick="navigateTo('voeding.html')">
+                <img src="icons/voeding.svg" alt="voeding">
+                <span>Voeding</span>
+            </button>
+            <button class="nav-btn" onclick="navigateTo('supplementen.html')">
+                <img src="icons/supplementen.svg" alt="supplementen">
+                <span>Supplementen</span>
+            </button>
+            <button class="nav-btn active" onclick="navigateTo('workout.html')">
+                <img src="icons/workout.svg" alt="workout">
+                <span>Workout</span>
+            </button>
+            <button class="nav-btn" onclick="navigateTo('body.html')">
+                <img src="icons/body.svg" alt="body">
+                <span>Body-<br>composition</span>
+            </button>
+        </aside>
+
+        <main class="content">
+            <section class="category">
+                <h2>Push</h2>
+                <div class="block large"></div>
+                <div class="block-row">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>
+            </section>
+
+            <section class="category">
+                <h2>Pull</h2>
+                <div class="block-row">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>
+                <div class="block-row">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>
+            </section>
+
+            <section class="category">
+                <h2>Legs</h2>
+                <div class="block-row">
+                    <div class="block tall"></div>
+                    <div class="block small"></div>
+                </div>
+                <div class="block-row">
+                    <div class="block small"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/workout/js/workout.js"></script>
+</body>
+</html>
