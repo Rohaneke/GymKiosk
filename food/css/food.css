@@ -11,6 +11,13 @@ body {
     min-height: 100vh;
 }
 
+.foodimg {
+    width: 90%;
+    height: 85%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
 .header-social {
     position: fixed;
     top: 0;
