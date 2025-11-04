@@ -33,34 +33,14 @@
 
         <main class="content">
             <section class="category">
-                <h2>Push</h2>
-                <div class="block large"></div>
-                <div class="block-row">
-                    <div class="block"></div>
-                    <div class="block"></div>
+                <h2>Select Workout</h2>
+                <div class="workout-selector">
+                    <button onclick="showWorkout('push')">Push</button>
+                    <button onclick="showWorkout('pull')">Pull</button>
+                    <button onclick="showWorkout('legs')">Legs</button>
                 </div>
-            </section>
-
-            <section class="category">
-                <h2>Pull</h2>
-                <div class="block-row">
-                    <div class="block"></div>
-                    <div class="block"></div>
-                </div>
-                <div class="block-row">
-                    <div class="block"></div>
-                    <div class="block"></div>
-                </div>
-            </section>
-
-            <section class="category">
-                <h2>Legs</h2>
-                <div class="block-row">
-                    <div class="block tall"></div>
-                    <div class="block small"></div>
-                </div>
-                <div class="block-row">
-                    <div class="block small"></div>
+                <div id="workout-info" class="workout-info">
+                 
                 </div>
             </section>
         </main>
