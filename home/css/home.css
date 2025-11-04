@@ -109,6 +109,18 @@ body {
       
 }
 
+.Influencers{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    width: 60vh;
+    height: 10vh;
+    background-color: #0D7377;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .row1_cut, .row2_cut, .row3_cut, .row4_cut,
 .row1_Influencers, .row2_Influencers, .row3_Influencers, .row4_Influencers  {
     width: 40vh;
