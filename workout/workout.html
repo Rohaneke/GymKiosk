@@ -3,47 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout App</title>
-    <link rel="stylesheet" href="/workout/css/workout.css">
+    <title>Workout</title>
+    <link rel="stylesheet" href="/workout/workout.css">
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <button class="nav-btn" onclick="navigateTo('')">
-                <img src="/workout/img/uitleg.png" alt="uitleg">
-                <span>Uitleg</span>
-            </button>
-            <button class="nav-btn" onclick="navigateTo('/food/food.html')">
-                <img src="/workout/img/voeding.png" alt="voeding">
-                <span>Voeding</span>
-            </button>
-            <button class="nav-btn" onclick="navigateTo('/supps/supps.html')">
-                <img src="/workout/img/sublementen (1).png" alt="supplementen">
-                <span>Supplementen</span>
-            </button>
-            <button class="nav-btn active" onclick="navigateTo('workout.html')">
-                <img src="/workout/img/workout.png" alt="workout">
-                <span>Workout</span>
-            </button>
-            <button class="nav-btn" onclick="navigateTo('/composition/composition.html')">
-                <img src="/workout/img/Body-composition (1).png" alt="body">
-                <span>Body-<br>composition</span>
-            </button>
-        </aside>
+    <div class="header-social">
+        <nav class="header-nav-secondary">
+            <ul>
+                <li><a href="../home/home.html"><img src="/workout/img/uitleg.png" alt="uitleg"><span>Uitleg</span></a></li>
+                <li><a href="../food/food.html"><img src="/workout/img/voeding.png" alt="voeding"><span>Voeding</span></a></li>
+                <li><a href="../supps/supps.html"><img src="/workout/img/sublementen (1).png" alt="supplementen"><span>Supplementen</span></a></li>
+                <li><a href="../workout/workout.html" class="active"><img src="/workout/img/workout.png" alt="workout"><span>Workout</span></a></li>
+                <li><a href="../composition/composition.html"><img src="/workout/img/Body-composition (1).png" alt="body"><span>Body<br>composition</span></a></li>
+            </ul>
+        </nav>
+    </div>
 
-        <main class="content">
-            <section class="category">
-                <h2>Select Workout</h2>
-                <div class="workout-selector">
-                    <button onclick="showWorkout('push')">Push</button>
-                    <button onclick="showWorkout('pull')">Pull</button>
-                    <button onclick="showWorkout('legs')">Legs</button>
-                </div>
-                <div id="workout-info" class="workout-info">
-                 
-                </div>
-            </section>
-        </main>
+    <div class="workout-title">Workout Schema's</div>
+
+    <div class="workout-section">
+        <h1>Kies je workout</h1>
+        <div class="workout-buttons">
+            <button onclick="showWorkout('push')">Push</button>
+            <button onclick="showWorkout('pull')">Pull</button>
+            <button onclick="showWorkout('legs')">Legs</button>
+        </div>
+        <div id="workout-info" class="workout-info">
+          
+        </div>
     </div>
 
     <script src="/workout/js/workout.js"></script>
