@@ -1,4 +1,4 @@
-// Calculate function
+// bereken functie
 function calculate() {
     // Get all the values
     var weight = document.getElementById('weight').value;
@@ -7,24 +7,24 @@ function calculate() {
     var gender = document.getElementById('gender').value;
     var activity = document.getElementById('activity').value;
 
-    // Check if empty
+    // Check of alle velden zijn ingevuld
     if (weight == '' || height == '' || age == '' || gender == '' || activity == '') {
         alert('Vul alle velden in!');
         return;
     }
 
-    // Convert to numbers
+    // verander naar nummers
     weight = parseFloat(weight);
     height = parseFloat(height);
     age = parseInt(age);
     activity = parseFloat(activity);
 
-    // Calculate BMI
+    // bereken bmr
     var heightM = height / 100;
     var bmi = weight / (heightM * heightM);
     bmi = Math.round(bmi * 10) / 10;
 
-    // Calculate BMR
+    // bereken bmr
     var bmr = 0;
     if (gender == 'male') {
         bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
@@ -33,7 +33,7 @@ function calculate() {
     }
     bmr = Math.round(bmr);
 
-    // Calculate TDEE
+    // bereken caloriebehoefte
     var tdee = bmr * activity;
     tdee = Math.round(tdee);
 
@@ -44,7 +44,7 @@ function calculate() {
     maxWeight = Math.round(maxWeight * 10) / 10;
     var idealWeight = minWeight + ' - ' + maxWeight;
 
-    // Calculate body fat
+    // berekend lichaams vet procent
     var bodyFat = 0;
     if (gender == 'male') {
         bodyFat = (1.20 * bmi) + (0.23 * age) - 16.2;
@@ -53,7 +53,7 @@ function calculate() {
     }
     bodyFat = Math.round(bodyFat * 10) / 10;
 
-    // Get BMI category
+    // krijg de bmi
     var category = '';
     var color = '';
     if (bmi < 18.5) {
@@ -70,17 +70,7 @@ function calculate() {
         color = '#e74c3c';
     }
 
-    // Calculate calories
-    var cutCal = tdee - 500;
-    var maintainCal = tdee;
-    var bulkCal = tdee + 500;
-
-    // Calculate macros
-    var protein = Math.round((maintainCal * 0.30) / 4);
-    var carbs = Math.round((maintainCal * 0.40) / 4);
-    var fats = Math.round((maintainCal * 0.30) / 9);
-
-    // Update the page
+    // Updatet de pagina
     document.getElementById('bmiValue').innerHTML = bmi;
     document.getElementById('bmiCategory').innerHTML = category;
     document.getElementById('bmiCategory').style.color = color;
@@ -90,15 +80,7 @@ function calculate() {
     document.getElementById('idealWeight').innerHTML = idealWeight + ' kg';
     document.getElementById('bodyFat').innerHTML = bodyFat + '%';
 
-    document.getElementById('cutCalories').innerHTML = cutCal + ' kcal/dag';
-    document.getElementById('maintainCalories').innerHTML = maintainCal + ' kcal/dag';
-    document.getElementById('bulkCalories').innerHTML = bulkCal + ' kcal/dag';
-
-    document.getElementById('proteinValue').innerHTML = protein + ' g';
-    document.getElementById('carbsValue').innerHTML = carbs + ' g';
-    document.getElementById('fatsValue').innerHTML = fats + ' g';
-
-    // Move the needle
+    // beweeg de pijl op de meter
     var angle = 0;
     if (bmi < 15) {
         angle = -90;
@@ -109,6 +91,6 @@ function calculate() {
     }
     document.getElementById('needle').style.transform = 'rotate(' + angle + 'deg)';
 
-    // Show results
+    // Toon resultaten
     document.getElementById('results').style.display = 'block';
 }
