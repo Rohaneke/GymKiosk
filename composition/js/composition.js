@@ -19,41 +19,12 @@ function calculate() {
     age = parseInt(age);
     activity = parseFloat(activity);
 
-    // bereken bmr
+    // bereken bmi
     var heightM = height / 100;
     var bmi = weight / (heightM * heightM);
     bmi = Math.round(bmi * 10) / 10;
 
-    // bereken bmr
-    var bmr = 0;
-    if (gender == 'male') {
-        bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
-    } else {
-        bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
-    }
-    bmr = Math.round(bmr);
-
-    // bereken caloriebehoefte
-    var tdee = bmr * activity;
-    tdee = Math.round(tdee);
-
-    // Calculate ideal weight
-    var minWeight = 18.5 * heightM * heightM;
-    var maxWeight = 24.9 * heightM * heightM;
-    minWeight = Math.round(minWeight * 10) / 10;
-    maxWeight = Math.round(maxWeight * 10) / 10;
-    var idealWeight = minWeight + ' - ' + maxWeight;
-
-    // berekend lichaams vet procent
-    var bodyFat = 0;
-    if (gender == 'male') {
-        bodyFat = (1.20 * bmi) + (0.23 * age) - 16.2;
-    } else {
-        bodyFat = (1.20 * bmi) + (0.23 * age) - 5.4;
-    }
-    bodyFat = Math.round(bodyFat * 10) / 10;
-
-    // krijg de bmi
+    // krijg de bmi categorie
     var category = '';
     var color = '';
     if (bmi < 18.5) {
@@ -74,11 +45,6 @@ function calculate() {
     document.getElementById('bmiValue').innerHTML = bmi;
     document.getElementById('bmiCategory').innerHTML = category;
     document.getElementById('bmiCategory').style.color = color;
-
-    document.getElementById('bmrValue').innerHTML = bmr + ' kcal/dag';
-    document.getElementById('tdeeValue').innerHTML = tdee + ' kcal/dag';
-    document.getElementById('idealWeight').innerHTML = idealWeight + ' kg';
-    document.getElementById('bodyFat').innerHTML = bodyFat + '%';
 
     // beweeg de pijl op de meter
     var angle = 0;
