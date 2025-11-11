@@ -1,0 +1,215 @@
+body {
+    background-color: #040D12;
+    font-family: 'Lexend', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.header-social {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.header-social ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #323232;
+    border-radius: 74px;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header-social ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; 
+}
+.header-social li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.header-social li a:hover {
+    background-color: #555555;
+    color: #14FFEC;
+}
+
+.title {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #14FFEC;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.input-box {
+    background-color: #323232;
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.input-box h2 {
+    color: #14FFEC;
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.input-box label {
+    color: #14FFEC;
+    font-size: 18px;
+}
+
+.input-box input {
+    width: 95%;
+    padding: 12px;
+    border: 2px solid #0D7377;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 16px;
+}
+
+.input-box select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #0D7377;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 16px;
+}
+
+.input-box button {
+    width: 100%;
+    padding: 15px;
+    background-color: #0D7377;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input-box button:hover {
+    background-color: #14FFEC;
+}
+
+.results-box {
+    background-color: #323232;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.results-box h2 {
+    color: #14FFEC;
+    font-size: 35px;
+    margin: 0;
+}
+
+.bmi-box {
+    background-color: #323232;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.bmi-box h3 {
+    color: #14FFEC;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.bmi-box p {
+    color: #888;
+    font-size: 16px;
+}
+
+.box {
+    background-color: #323232;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.box h3 {
+    color: #14FFEC;
+    font-size: 25px;
+    margin: 0;
+}
+
+.box p {
+    color: #888;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.box2 {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #0D7377;
+}
+
+.box2 h4 {
+    color: #14FFEC;
+    font-size: 22px;
+    margin: 0;
+}
+
+.box2 p {
+    color: #888;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.box3 {
+    background-color: #0D7377;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.box3 h4 {
+    color: white;
+    font-size: 22px;
+    margin: 10px;
+}
+
+.box3 p {
+    color: white;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#needle {
+    transform-origin: 200px 200px;
+}

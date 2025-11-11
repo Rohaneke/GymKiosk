@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Body Composition</title>
+    <link rel="stylesheet" href="css/composition.css">
+</head>
+<body>
+    <div class="header-social">
+        <nav class="header-nav-secondary">
+            <ul>
+                <li><a href="../home/home.html"><img src="../home/img/uitleg1.png" alt="logo van uitleg"><span>Uitleg</span></a></li>
+                <li><a href="../food/food.html"><img src="../home/img/voeding.png" alt="logo van voeding"><span>Voeding</span></a></li>
+                <li><a href="../supps/supps.html"><img src="../home/img/sublementen.png" alt="logo van sublementen"><span>Suplementen</span></a></li>
+                <li><a href="../workout/workout.html"><img src="../home/img/workout.png" alt="logo van workout"><span>Workout</span></a></li>
+                <li><a href="../composition/composition.html"><img src="../home/img/Body-composition.png" alt="logo van Body-composition"><span>Body-composition</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="title">Body Composition Calculator</div>
+
+    <div class="container">
+        <div class="input-box">
+            <h2>Voer je gegevens in</h2>
+            <br>
+            <label>Gewicht (kg)</label><br>
+            <input type="text" id="weight" placeholder="70"><br><br>
+
+            <label>Lengte (cm)</label><br>
+            <input type="text" id="height" placeholder="175"><br><br>
+
+            <label>Leeftijd</label><br>
+            <input type="text" id="age" placeholder="25"><br><br>
+
+            <label>Geslacht</label><br>
+            <select id="gender">
+                <option value="">Selecteer...</option>
+                <option value="male">Man</option>
+                <option value="female">Vrouw</option>
+            </select><br><br>
+
+            <label>Activiteitsniveau</label><br>
+            <select id="activity">
+                <option value="">Selecteer...</option>
+                <option value="1.2">Sedentair (weinig tot geen beweging)</option>
+                <option value="1.375">Licht actief (1-3 dagen per week)</option>
+                <option value="1.55">Matig actief (3-5 dagen per week)</option>
+                <option value="1.725">Zeer actief (6-7 dagen per week)</option>
+                <option value="1.9">Extra actief (intense training 2x per dag)</option>
+            </select><br><br>
+
+            <button id="calculateBtn" onclick="calculate()">Bereken</button>
+        </div>
+
+        <div class="results-box" id="results" style="display: none;">
+            <h2>Jouw Resultaten</h2>
+            <br>
+            <div class="bmi-box">
+                <h3>BMI (Body Mass Index)</h3>
+                <svg width="400" height="250">
+                    <path d="M 50 200 A 150 150 0 0 1 350 200" fill="none" stroke="#323232" stroke-width="30"/>
+                    <path d="M 50 200 A 150 150 0 0 1 125 75" fill="none" stroke="#3498db" stroke-width="30"/>
+                    <path d="M 125 75 A 150 150 0 0 1 200 50" fill="none" stroke="#2ecc71" stroke-width="30"/>
+                    <path d="M 200 50 A 150 150 0 0 1 275 75" fill="none" stroke="#f39c12" stroke-width="30"/>
+                    <path d="M 275 75 A 150 150 0 0 1 350 200" fill="none" stroke="#e74c3c" stroke-width="30"/>
+                    <line id="needle" x1="200" y1="200" x2="200" y2="75" stroke="#14FFEC" stroke-width="4"/>
+                    <circle cx="200" cy="200" r="10" fill="#14FFEC"/>
+                </svg>
+                <h1 id="bmiValue" style="text-align: center; color: #14FFEC;">--</h1>
+                <h3 id="bmiCategory" style="text-align: center; color: #0D7377;">Voer gegevens in</h3>
+                <br>
+                <p style="color: #3498db;">■ Ondergewicht (&lt;18.5)</p>
+                <p style="color: #2ecc71;">■ Normaal (18.5-24.9)</p>
+                <p style="color: #f39c12;">■ Overgewicht (25-29.9)</p>
+                <p style="color: #e74c3c;">■ Obesitas (≥30)</p>
+            </div>
+
+            <br><br>
+            <div class="box">
+                <h3>BMR</h3>
+                <p>Basaal Metabolisme</p>
+                <h2 id="bmrValue" style="color: white;">-- kcal/dag</h2>
+                <p>Calorieën in rust</p>
+            </div>
+            <br>
+            <div class="box">
+                <h3>TDEE</h3>
+                <p>Totale Dagelijkse Energiebehoefte</p>
+                <h2 id="tdeeValue" style="color: white;">-- kcal/dag</h2>
+                <p>Calorieën voor onderhoud</p>
+            </div>
+            <br>
+            <div class="box">
+                <h3>Ideaal Gewicht</h3>
+                <p>Gezond gewichtsbereik</p>
+                <h2 id="idealWeight" style="color: white;">-- kg</h2>
+                <p>Op basis van lengte</p>
+            </div>
+            <br>
+            <div class="box">
+                <h3>Body Fat %</h3>
+                <p>Geschat lichaamsvetpercentage</p>
+                <h2 id="bodyFat" style="color: white;">-- %</h2>
+                <p>Op basis van BMI</p>
+            </div>
+
+            <br><br>
+            <h3 style="text-align: center;">Calorie Doelen</h3>
+            <br>
+            <div class="box2">
+                <h4>Afvallen</h4>
+                <h2 id="cutCalories" style="color: white;">-- kcal/dag</h2>
+                <p>-500 kcal deficit</p>
+            </div>
+            <br>
+            <div class="box2">
+                <h4>Onderhouden</h4>
+                <h2 id="maintainCalories" style="color: white;">-- kcal/dag</h2>
+                <p>Huidig gewicht behouden</p>
+            </div>
+            <br>
+            <div class="box2">
+                <h4>Bulken</h4>
+                <h2 id="bulkCalories" style="color: white;">-- kcal/dag</h2>
+                <p>+500 kcal surplus</p>
+            </div>
+
+            <br><br>
+            <h3 style="text-align: center;">Aanbevolen Macronutriënten (Onderhoud)</h3>
+            <br>
+            <div class="box3">
+                <div style="font-size: 50px;">🍗</div>
+                <h4>Eiwit</h4>
+                <h2 id="proteinValue" style="color: white;">-- g</h2>
+                <p>30%</p>
+            </div>
+            <br>
+            <div class="box3">
+                <div style="font-size: 50px;">🍚</div>
+                <h4>Koolhydraten</h4>
+                <h2 id="carbsValue" style="color: white;">-- g</h2>
+                <p>40%</p>
+            </div>
+            <br>
+            <div class="box3">
+                <div style="font-size: 50px;">🥑</div>
+                <h4>Vetten</h4>
+                <h2 id="fatsValue" style="color: white;">-- g</h2>
+                <p>30%</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/composition.js"></script>
+</body>
+</html>
