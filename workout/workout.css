@@ -48,10 +48,6 @@ body {
     color: #14FFEC;
 }
 
-.header-social ul li a.active {
-    background-color: #0D7377;
-}
-
 /* Hoofdcontent */
 .workout-title {
     margin-top: 30px;
